@@ -42,7 +42,7 @@ body {
   -ms-grid-row: 10;
   -ms-grid-row-span: 3;
   grid-row: 10 / 13;
-  background: url("https://vikram-hegde.github.io/resources/images/small1.png")
+  background: url("https://images.pexels.com/photos/39867/mandarin-duck-isabella-plantation-39867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
     no-repeat 50% 50% / cover;
 }
 
@@ -53,7 +53,7 @@ body {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   grid-row: 1 / 4;
-  background: url("https://vikram-hegde.github.io/resources/images/small2.png")
+  background: url("https://images.pexels.com/photos/592677/pexels-photo-592677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
     no-repeat 50% 50% / cover;
 }
 
@@ -64,7 +64,7 @@ body {
   -ms-grid-row: 10;
   -ms-grid-row-span: 3;
   grid-row: 10 / 13;
-  background: url("https://vikram-hegde.github.io/resources/images/small3.png")
+  background: url("https://images.pexels.com/photos/2294541/pexels-photo-2294541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
     no-repeat 50% 50% / cover;
 }
 
