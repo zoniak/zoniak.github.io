@@ -5092,4 +5092,11 @@ h2.with-project-number .project-number {
   float: left;
   margin-right: 5px;
 }
+
+
+@media only screen and (max-width: 600px) {
+  #imagenCodigo {
+    margin-top: 10%;
+  }
+}
 /*# sourceMappingURL=main.4c6e144e.map*/
