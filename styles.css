@@ -5094,7 +5094,7 @@ h2.with-project-number .project-number {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   #imagenCodigo {
     margin-top: 0%;
   }
