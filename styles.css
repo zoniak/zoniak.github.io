@@ -5094,9 +5094,9 @@ h2.with-project-number .project-number {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   #imagenCodigo {
-    margin-top: 10%;
+    margin-top: 0%;
   }
 }
 /*# sourceMappingURL=main.4c6e144e.map*/
