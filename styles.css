@@ -4900,6 +4900,9 @@ button.close {
 .img-responsive {
   margin-bottom: 10px;
 }
+.img-responsive:hover {
+  cursor: pointer;
+}
 .hero-full-container {
   height: 80vh;
   max-height: 500px;
