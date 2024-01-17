@@ -4906,6 +4906,9 @@ button.close {
 }
 .img-responsive:hover {
   cursor: pointer;
+  box-shadow: 0px 0px 50px #8e040492;
+  transition: box-shadow 0.6s ease-in-out;
+ 
 }
 .hero-full-container {
   height: 80vh;
