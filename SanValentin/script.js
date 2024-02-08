@@ -48,8 +48,8 @@ document.getElementById("noBtn").addEventListener("click", function () {
       document.getElementById("sadGifContainer").style.display = "block";
       var yourImg = document.getElementById("gatitoEstresado");
       if (yourImg && yourImg.style) {
-        yourImg.style.height = "500px";
-        yourImg.style.width = "400px";
+        yourImg.style.height = "400px";
+        yourImg.style.width = "300px";
       }
 
       // Modificar el botón "No"
@@ -77,8 +77,8 @@ document.getElementById("noBtn").addEventListener("click", function () {
       document.getElementById("sadGifContainer2").style.display = "block";
       var yourImg = document.getElementById("ketaSad");
       if (yourImg && yourImg.style) {
-        yourImg.style.height = "500px";
-        yourImg.style.width = "400px";
+        yourImg.style.height = "400px";
+        yourImg.style.width = "300px";
         
       }
 
