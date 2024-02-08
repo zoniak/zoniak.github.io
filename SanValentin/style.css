@@ -4,7 +4,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #ffffff;
+    background: linear-gradient(90deg, rgba(255,0,52,1) 0%, rgba(228,72,196,1) 100%);
   }
   
   .container {
@@ -27,9 +27,9 @@ body {
     font-size: 16px;
     margin: 10px;
     cursor: pointer;
-    background-color: #009705; /* Verde */
+    background-color: #1af525; /* Verde */
     color: white;
-    border: 2px solid #ffc0cb; /* Bordes rosa */
+    border: 2px solid #09b163ec; /* Bordes rosa */
     border-radius: 10px; /* Esquinas redondeadas */
   }
   
@@ -40,7 +40,7 @@ body {
     cursor: pointer;
     background-color: #ff5733; /* Rojo */
     color: white;
-    border: 2px solid #ffc0cb; /* Bordes rosa */
+    border: 2px solid #a10707; /* Bordes rosa */
     border-radius: 10px; /* Esquinas redondeadas */
   }
   #noBtn span {
@@ -50,7 +50,7 @@ body {
   }
   
   #siBtn:hover {
-    background-color: #053a03; /* Cambia a otro color en hover, puedes ajustar el valor según tus preferencias */
+    background-color: #10cc09; /* Cambia a otro color en hover, puedes ajustar el valor según tus preferencias */
   }
   #noBtn:hover {
     background-color: #641e0d; /* Cambia a otro color en hover, puedes ajustar el valor según tus preferencias */
