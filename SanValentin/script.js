@@ -46,11 +46,16 @@ document.getElementById("noBtn").addEventListener("click", function () {
       document.getElementById("happyGifContainer").style.display = "none";
       document.getElementById("gifContainer").style.display = "none";
       document.getElementById("sadGifContainer").style.display = "block";
+      //Mod img size 
       var yourImg = document.getElementById("gatitoEstresado");
       if (yourImg && yourImg.style) {
         yourImg.style.height = "300px";
         yourImg.style.width = "240px";
       }
+      
+      document.getElementById("question").innerHTML =
+        "oye :'(";
+      
 
       // Modificar el botón "No"
       document.getElementById("noBtn").innerHTML =
@@ -75,12 +80,17 @@ document.getElementById("noBtn").addEventListener("click", function () {
       document.getElementById("noBtn").style.backgroundColor = "#F1330A";
       document.getElementById("sadGifContainer").style.display = "none";
       document.getElementById("sadGifContainer2").style.display = "block";
+      
+      
       var yourImg = document.getElementById("ketaSad");
       if (yourImg && yourImg.style) {
         yourImg.style.height = "300px";
         yourImg.style.width = "240px";
         
       }
+      
+       document.getElementById("question").innerHTML =
+        "¿No quieres ser mi San Valentin? :(";
 
       // Hacer que el botón "Sí" crezca
       document.getElementById("siBtn").style.fontSize = "30px";
@@ -154,8 +164,8 @@ document.getElementById("noBtn").addEventListener("click", function () {
       document.getElementById("noBtn").style.backgroundColor = "#F1330A";
       var yourImg = document.getElementById("piticliSad");
       if (yourImg && yourImg.style) {
-        yourImg.style.height = "500px";
-        yourImg.style.width = "400px";
+        yourImg.style.height = "300px";
+        yourImg.style.width = "250px";
       }
 
       // Hacer que el botón "Sí" crezca
