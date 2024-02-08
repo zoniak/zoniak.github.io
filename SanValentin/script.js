@@ -48,8 +48,8 @@ document.getElementById("noBtn").addEventListener("click", function () {
       document.getElementById("sadGifContainer").style.display = "block";
       var yourImg = document.getElementById("gatitoEstresado");
       if (yourImg && yourImg.style) {
-        yourImg.style.height = "400px";
-        yourImg.style.width = "300px";
+        yourImg.style.height = "300px";
+        yourImg.style.width = "240px";
       }
 
       // Modificar el botón "No"
@@ -59,7 +59,7 @@ document.getElementById("noBtn").addEventListener("click", function () {
         "perdon me confundi de boton";
       document.getElementById("noBtn").style.backgroundColor = "#F1330A";
 
-      document.getElementById("siBtn").style.fontSize = "40px";
+      document.getElementById("siBtn").style.fontSize = "20px";
       document.getElementById("siBtn").style.padding = "20px 40px";
 
       noButtonClickCount++;
@@ -77,13 +77,13 @@ document.getElementById("noBtn").addEventListener("click", function () {
       document.getElementById("sadGifContainer2").style.display = "block";
       var yourImg = document.getElementById("ketaSad");
       if (yourImg && yourImg.style) {
-        yourImg.style.height = "400px";
-        yourImg.style.width = "300px";
+        yourImg.style.height = "300px";
+        yourImg.style.width = "240px";
         
       }
 
       // Hacer que el botón "Sí" crezca
-      document.getElementById("siBtn").style.fontSize = "50px";
+      document.getElementById("siBtn").style.fontSize = "30px";
       document.getElementById("siBtn").style.padding = "30px 50px";
 
       noButtonState++;
