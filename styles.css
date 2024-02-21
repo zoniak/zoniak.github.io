@@ -3842,7 +3842,7 @@ tbody.collapse.in {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #888;
+  background-color: #fdfbfb; /*Color barra navegacion*/
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
@@ -4793,16 +4793,17 @@ button.close {
   color: #555;
 }
 .navbar-fullscreen .footer-container a {
-  color: #555;
+  color: #ffffff;
 }
 .navbar-fullscreen .footer-container a:hover {
-  color: #fff;
+  color: #900000;
 }
 .navbar-fullscreen .footer-container .fa-icon {
-  border-color: #555;
+  border-color: #ffffff;
 }
 .navbar-fullscreen .footer-container .fa-icon:hover {
-  background-color: #555;
+  background-color: #6a0303;
+  border-color: #880000;
 }
 .navbar-fullscreen .footer-container .email-container {
   padding: 30px 0;
@@ -4840,12 +4841,12 @@ button.close {
   padding: 5px 0 6px;
 }
 .navbar-fullscreen .navbar-fullscreen-links a {
-  color: #555;
+  color: #f8f8f8;
 }
 .navbar-fullscreen .navbar-fullscreen-links a.active,
 .navbar-fullscreen .navbar-fullscreen-links a:focus,
 .navbar-fullscreen .navbar-fullscreen-links a:hover {
-  color: #fff;
+  color: #840a0a;
   text-decoration: none;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -4961,7 +4962,7 @@ blockquote.large-spacing {
   padding: 60px 0;
 }
 .fa-icon {
-  color: #000;
+  color: #fefdfd;
   width: 32px;
   height: 32px;
   line-height: 29px;
@@ -4969,11 +4970,11 @@ blockquote.large-spacing {
   text-align: center;
   display: inline-block;
   border-radius: 60px;
-  border: 1px solid #000;
+  border: 1px solid #ffffff;
 }
 .fa-icon:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: #7b0202;
+  color: #aa0404;
 }
 .fa-icon .fa {
   border: none;
