@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="description" name="description" />
+    <meta name="google" content="notranslate" />
+    <meta
+      content="Mashup templates have been developped by Orson.io team"
+      name="author"
+    />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link href="assets/smile.ico" rel="icon" />
+    <title>Ángel García</title>
+    <link href="styles.css" rel="stylesheet" />
+
+    <style>
+      .seccion-ejercicios {
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      /* Hace que el índice te siga al hacer scroll hacia abajo */
+      .indice-lateral {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 80px;
+      }
+      .indice-lateral .list-group-item {
+        border-radius: 4px;
+        margin-bottom: 5px;
+      }
+      /* Estilos para las tarjetas de los ejercicios */
+      .tarjeta-ejercicio {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.3s ease;
+      }
+      .tarjeta-ejercicio:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+      .tarjeta-ejercicio summary {
+        font-size: 1.25em;
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+        list-style: none;
+        color: #333;
+      }
+      /* Oculta la flechita por defecto del navegador */
+      .tarjeta-ejercicio summary::-webkit-details-marker {
+        display: none;
+      }
+      /* Añade un símbolo + o - */
+      .tarjeta-ejercicio summary:after {
+        content: "+";
+        float: right;
+        font-size: 1.2em;
+        color: #888;
+      }
+      .tarjeta-ejercicio[open] summary:after {
+        content: "−";
+      }
+      .contenido-ejercicio {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+        color: #555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-fixed-top navbar-default">
+        <div class="container">
+          <button type="button" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/smile.png" width="30" height="30" alt="" />
+          </a>
+          <nav class="navbar-fullscreen" id="navbar-middle">
+            <button type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <ul class="navbar-fullscreen-links">
+              <li><a href="./index.html" title="">Inicio</a></li>
+              <li>
+                <a href="materiales.html" title="">Material para clases</a>
+              </li>
+              <li>
+                <a href="https://github.com/zoniak?tab=repositories" title=""
+                  >Proyectos GitHub</a
+                >
+              </li>
+              <li><a href="oposiciones.html" title="">Oposiciones</a></li>
+            </ul>
+
+            <div class="footer-container">
+              <p class="footer-share-icons">
+                <a
+                  href="https://www.linkedin.com/in/angelgarciacaparros/"
+                  class="fa-icon"
+                  title=""
+                >
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/zoniak" class="fa-icon" title="">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="mailto:angelgarciacaparros@gmail.com"
+                  class="fa-icon"
+                  title=""
+                >
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+              </p>
+            </div>
+          </nav>
+        </div>
+      </nav>
+    </header>
+
+    <div class="section-container seccion-ejercicios">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 class="h2 text-center" style="margin-bottom: 40px">
+              Ejercicios Oposiciones
+            </h1>
+          </div>
+
+          <div class="col-md-3 hidden-xs hidden-sm">
+            <div class="indice-lateral list-group">
+              <h4 style="margin-bottom: 15px">Índice</h4>
+              <a href="#ej-html-basico" class="list-group-item"
+                >1. HTML Básico</a
+              >
+              <br />
+              <a href="#ej-css-flexbox" class="list-group-item"
+                >2. CSS Flexbox</a
+              >
+              <br />
+              <a href="#ej-js-dom" class="list-group-item"
+                >3. Manipulación del DOM</a
+              >
+              <br />
+              <a href="#ej-api-fetch" class="list-group-item"
+                >4. Consumo de APIs (Fetch)</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-9">
+            <details class="tarjeta-ejercicio" id="ej-html-basico">
+              <summary>Ejercicio 1: Estructura HTML Básica</summary>
+              <div class="contenido-ejercicio">
+                <p>
+                  <strong>Objetivo:</strong> Crear la estructura semántica de un
+                  blog.
+                </p>
+                <p>
+                  En este ejercicio, debes utilizar las etiquetas
+                  <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>,
+                  <code>&lt;article&gt;</code> y
+                  <code>&lt;footer&gt;</code> para construir una página válida
+                  en HTML5.
+                </p>
+                <a href="#" class="btn btn-primary btn-sm"
+                  >Descargar recursos</a
+                >
+              </div>
+            </details>
+
+            <details class="tarjeta-ejercicio" id="ej-css-flexbox">
+              <summary>Ejercicio 2: Maquetación con Flexbox</summary>
+              <div class="contenido-ejercicio">
+                <p>
+                  <strong>Objetivo:</strong> Centrar elementos y crear una
+                  cuadrícula responsiva.
+                </p>
+                <p>
+                  Aplica propiedades de <code>display: flex</code> para crear
+                  una galería de imágenes que se adapte a dispositivos móviles
+                  sin utilizar <i>media queries</i>.
+                </p>
+                <a href="#" class="btn btn-primary btn-sm">Ver solución</a>
+              </div>
+            </details>
+
+            <details class="tarjeta-ejercicio" id="ej-js-dom">
+              <summary>Ejercicio 3: Manipulación del DOM en JS</summary>
+              <div class="contenido-ejercicio">
+                <p>
+                  <strong>Objetivo:</strong> Crear un To-Do list interactivo.
+                </p>
+                <p>
+                  Añade un campo de texto y un botón. Al hacer clic, debes crear
+                  un nuevo elemento <code>&lt;li&gt;</code> y añadirlo a la
+                  lista existente utilizando
+                  <code>document.createElement</code>.
+                </p>
+              </div>
+            </details>
+
+            <details class="tarjeta-ejercicio" id="ej-api-fetch">
+              <summary>Ejercicio 4: Consumo de APIs con Fetch</summary>
+              <div class="contenido-ejercicio">
+                <p>
+                  <strong>Objetivo:</strong> Mostrar usuarios desde una API
+                  pública.
+                </p>
+                <p>
+                  Haz una petición a
+                  <i>https://jsonplaceholder.typicode.com/users</i> y renderiza
+                  en pantalla el nombre y email de cada usuario en tarjetas
+                  separadas.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        navbarFixedTopAnimation();
+        navbarToggleSidebar();
+        closeMenuBeforeGoingToPage();
+        navActivePage();
+      });
+    </script>
+    <script type="text/javascript" src="./javascript.js"></script>
+  </body>
+</html>
