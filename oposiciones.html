@@ -162,69 +162,88 @@
 
           <div class="col-md-9">
             <details class="tarjeta-ejercicio" id="ej-html-basico">
-              <summary>Ejercicio 1: Estructura HTML Básica</summary>
+              <summary>Diseño de direccionamiento con VLSM</summary>
               <div class="contenido-ejercicio">
                 <p>
-                  <strong>Objetivo:</strong> Crear la estructura semántica de un
-                  blog.
+                  <strong>Objetivo:</strong> Calcular la dirección de red, la
+                  máscara de subred (en formato prefijo), la primera IP útil, la
+                  última IP útil y la dirección de broadcast para cada una de
+                  las subredes.
                 </p>
                 <p>
-                  En este ejercicio, debes utilizar las etiquetas
-                  <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>,
-                  <code>&lt;article&gt;</code> y
-                  <code>&lt;footer&gt;</code> para construir una página válida
-                  en HTML5.
+                  Una empresa dispone de la dirección de red de clase C
+                  192.168.100.0/24. Se pide realizar un diseño de red utilizando
+                  VLSM para aprovechar al máximo las direcciones IP, sabiendo
+                  que la empresa tiene los siguientes departamentos y
+                  necesidades de equipos (hosts):
+                  <br />
+                  <code>&lt;Departamento Comercial: 60 equipos.&gt;</code>
+                  <br />
+                  <code
+                    >&lt;Departamento de Administración: 28 equipos&gt;</code
+                  >
+                  <br />
+                  <code>&lt;Departamento de Dirección: 12 equipos.&gt;</code>
+                  <br />
+                  <code
+                    >&lt;Enlace WAN entre los dos routers principales (R1 y R2):
+                    2 equipos.&gt;</code
+                  >
                 </p>
-                <a href="#" class="btn btn-primary btn-sm"
-                  >Descargar recursos</a
+                <a
+                  href="docs/SolucionesEjercicios/VSLM1Solucion.md"
+                  class="btn btn-primary btn-sm"
+                  >Ver solución</a
                 >
               </div>
             </details>
 
             <details class="tarjeta-ejercicio" id="ej-css-flexbox">
-              <summary>Ejercicio 2: Maquetación con Flexbox</summary>
+              <summary>Enrutamiento Estático</summary>
               <div class="contenido-ejercicio">
                 <p>
-                  <strong>Objetivo:</strong> Centrar elementos y crear una
-                  cuadrícula responsiva.
+                  <strong>Objetivo:</strong> Escribir los comandos de Cisco IOS
+                  necesarios en R1, R2 y R3 para configurar el enrutamiento
+                  estático de forma que todas las LANs puedan comunicarse entre
+                  sí.
                 </p>
                 <p>
-                  Aplica propiedades de <code>display: flex</code> para crear
-                  una galería de imágenes que se adapte a dispositivos móviles
-                  sin utilizar <i>media queries</i>.
+                  Una empresa tiene tres sedes conectadas en línea mediante tres
+                  routers (R1, R2 y R3). Cada router tiene conectada una red de
+                  área local (LAN) con los equipos de los trabajadores
+                  <br />
+                  <br />
+                  Las direcciones IP asignadas a las interfaces son las
+                  siguientes:
+                  <br />
+
+                  <code
+                    >Router 1 (R1):
+                    <br />
+                    LAN 1: 192.168.1.0/24 (IP del router: 192.168.1.1)
+                    <br />
+                    Interfaz Serial conectada a R2: 10.0.0.1/30</code
+                  >
+                  <br />
+                  <br />
+                  <code
+                    >Router 2 (R2):
+                    <br />
+                    LAN 2: 192.168.2.0/24 (IP del router: 192.168.2.1)
+                    <br />
+                    Interfaz Serial conectada a R1: 10.0.0.2/30</code
+                  >
+                  <br />
+                  <br />
+                  <code
+                    >Router 3 (R3):
+                    <br />
+                    LAN 3: 192.168.3.0/24 (IP del router: 192.168.3.1)
+                    <br />
+                    Interfaz Serial conectada a R2: 10.0.0.3/30</code
+                  >
                 </p>
                 <a href="#" class="btn btn-primary btn-sm">Ver solución</a>
-              </div>
-            </details>
-
-            <details class="tarjeta-ejercicio" id="ej-js-dom">
-              <summary>Ejercicio 3: Manipulación del DOM en JS</summary>
-              <div class="contenido-ejercicio">
-                <p>
-                  <strong>Objetivo:</strong> Crear un To-Do list interactivo.
-                </p>
-                <p>
-                  Añade un campo de texto y un botón. Al hacer clic, debes crear
-                  un nuevo elemento <code>&lt;li&gt;</code> y añadirlo a la
-                  lista existente utilizando
-                  <code>document.createElement</code>.
-                </p>
-              </div>
-            </details>
-
-            <details class="tarjeta-ejercicio" id="ej-api-fetch">
-              <summary>Ejercicio 4: Consumo de APIs con Fetch</summary>
-              <div class="contenido-ejercicio">
-                <p>
-                  <strong>Objetivo:</strong> Mostrar usuarios desde una API
-                  pública.
-                </p>
-                <p>
-                  Haz una petición a
-                  <i>https://jsonplaceholder.typicode.com/users</i> y renderiza
-                  en pantalla el nombre y email de cada usuario en tarjetas
-                  separadas.
-                </p>
               </div>
             </details>
           </div>
