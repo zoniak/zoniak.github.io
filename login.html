@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entorno de Prueba Hacker - Wireshark</title>
+    <!-- Incluimos Tailwind para utilidades rápidas -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos personalizados para la estética hacker */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #000;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden; /* Evitar scrollbars por el canvas */
+        }
+
+        /* El canvas ocupa todo el fondo */
+        #matrix-canvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        /* Contenedor del formulario, por encima del canvas */
+        .login-container {
+            position: relative;
+            z-index: 10;
+            background-color: rgba(0, 10, 0, 0.85); /* Fondo oscuro semitransparente */
+            border: 2px solid #0f0;
+            box-shadow: 0 0 15px #0f0, inset 0 0 10px #0f0;
+            padding: 2.5rem;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Textos e inputs de neón */
+        h2, p, label {
+            color: #0f0;
+            text-shadow: 0 0 5px #0f0;
+        }
+
+        input {
+            background-color: rgba(0, 20, 0, 0.6);
+            border: 1px solid #005500;
+            color: #0f0;
+            text-shadow: 0 0 2px #0f0;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #0f0;
+            box-shadow: 0 0 8px #0f0;
+        }
+
+        input::placeholder {
+            color: #004400;
+        }
+
+        button {
+            background-color: transparent;
+            color: #0f0;
+            border: 1px solid #0f0;
+            box-shadow: 0 0 5px #0f0;
+            text-shadow: 0 0 5px #0f0;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #0f0;
+            color: #000;
+            box-shadow: 0 0 15px #0f0;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen relative p-4">
+
+    <!-- Canvas para el efecto Matrix -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Formulario central -->
+    <div class="login-container">
+        <div class="text-center mb-6">
+            <h2 class="text-2xl font-bold mb-2">SYSTEM.LOGIN</h2>
+            <p class="text-sm opacity-80">> WARNING: UNENCRYPTED_HTTP_CONNECTION</p>
+            <p class="text-xs opacity-60 mt-1">> Test environment for packet sniffing</p>
+        </div>
+        
+        <!-- El formulario envía por POST a un dominio HTTP de prueba -->
+        <form action="http://example.com/login-falso" method="POST" class="space-y-4">
+            <div>
+                <label for="usuario" class="block text-sm mb-1">>_ USERNAME:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Ej: neo_admin" required
+                       class="w-full px-4 py-2 rounded focus:ring-0">
+            </div>
+            
+            <div>
+                <label for="password" class="block text-sm mb-1">>_ PASSWORD:</label>
+                <input type="password" id="password" name="password" placeholder="Ej: tr1n1ty" required
+                       class="w-full px-4 py-2 rounded focus:ring-0">
+            </div>
+            
+            <div class="pt-4">
+                <button type="submit" class="w-full py-3 rounded cursor-pointer">
+                    [ INJECT PAYLOAD ]
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Script para generar el efecto visual de Matrix -->
+    <script>
+        window.onload = function() {
+            const canvas = document.getElementById('matrix-canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Ajustar el canvas al tamaño de la ventana
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            // Caracteres que caerán (mezcla de letras, números y katakana)
+            const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz@#$%^&*()ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ'.split('');
+            
+            const fontSize = 16;
+            let columns = canvas.width / fontSize;
+            
+            // Array para mantener la posición 'y' (caída) de cada columna
+            let drops = [];
+            for (let x = 0; x < columns; x++) {
+                drops[x] = 1;
+            }
+
+            // Función de dibujo
+            function drawMatrix() {
+                // Dibujar un fondo negro semitransparente para crear la "estela"
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // Configurar el color y la fuente del texto
+                ctx.fillStyle = '#0F0'; // Verde clásico de Matrix
+                ctx.font = fontSize + 'px monospace';
+
+                // Recorrer cada columna
+                for (let i = 0; i < drops.length; i++) {
+                    // Elegir un carácter al azar
+                    const text = chars[Math.floor(Math.random() * chars.length)];
+                    
+                    // Dibujarlo
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                    // Si la gota ha llegado abajo y de forma aleatoria, resetearla arriba
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+
+                    // Mover la gota hacia abajo
+                    drops[i]++;
+                }
+            }
+
+            // Actualizar la animación cada 33 milisegundos (~30 fps)
+            setInterval(drawMatrix, 33);
+        };
+    </script>
+</body>
+</html>
